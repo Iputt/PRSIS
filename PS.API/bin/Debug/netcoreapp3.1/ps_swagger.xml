@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PS.API</name>
+    </assembly>
+    <members>
+        <member name="T:PS.API.Controllers.CommonController">
+            <summary>
+            通用接口
+            </summary>
+        </member>
+        <member name="M:PS.API.Controllers.CommonController.#ctor(Microsoft.Extensions.Logging.ILogger{PS.API.Controllers.CommonController})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PS.API.Controllers.CommonController.Demo">
+            <summary>
+            Ps API 测试接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Program">
+            <summary>
+            项目主文件
+            </summary>
+        </member>
+        <member name="M:PS.API.Program.Main(System.String[])">
+            <summary>
+            程序入口
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:PS.API.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            转换->Net Core
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Startup">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:PS.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:PS.API.Startup.Configuration">
+            <summary>
+            配置类-依赖
+            </summary>
+        </member>
+        <member name="M:PS.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置服务
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:PS.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            配置请求管道
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
