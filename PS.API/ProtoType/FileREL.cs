@@ -5,7 +5,15 @@ using System.Threading.Tasks;
 
 namespace PS.API.ProtoType
 {
-    public class File
+    /// <summary>
+    /// 文件相关类型
+    /// </summary>
+    public class FileREL
     {
+    }
+
+    public class ImgObject
+    {
+
     }
 }

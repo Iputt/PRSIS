@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.IO;
 
 namespace PS.API.Controllers
 {
@@ -32,6 +33,18 @@ namespace PS.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Demo()
         {
+            return Ok();
+        }
+
+        /// <summary>
+        /// 获取图片附件
+        /// </summary>
+        /// <param name="idsStr"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> GetAttachment([FromForm]FileStream file)
+        {
+            
             return Ok();
         }
     }

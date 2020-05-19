@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -63,6 +67,17 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj",
+        "projectName": "PS.GeneralProvider",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj"
+      },
+      "frameworks": {
+        "net461": {}
       }
     }
   }

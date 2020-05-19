@@ -75,6 +75,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "PS.GeneralProvider/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/PS.GeneralProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PS.GeneralProvider.dll": {}
+        }
       }
     }
   },
@@ -179,10 +188,16 @@
         "swashbuckle.aspnetcore.swaggerui.5.4.1.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "PS.GeneralProvider/1.0.0": {
+      "type": "project",
+      "path": "../PS.GeneralProvider/PS.GeneralProvider.csproj",
+      "msbuildProject": "../PS.GeneralProvider/PS.GeneralProvider.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "PS.GeneralProvider >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.4.1"
     ]
   },
@@ -211,7 +226,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj": {
+              "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

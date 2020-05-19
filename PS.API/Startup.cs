@@ -56,6 +56,9 @@ namespace PS.API
                 string xmlPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "ps_swagger.xml");
                 c.IncludeXmlComments(xmlPath);
             });
+
+            //×¢²á»º´æ·þÎñ - Redis/MemoryCache
+            CacheInjection.Initialize(services, _appsettingConfig.RedisConnection, _appsettingConfig.InstanceName, _appsettingConfig.IsRedis);
         }
 
         /// <summary>
