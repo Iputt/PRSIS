@@ -27,8 +27,20 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj": {
-                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj"
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj"
+              },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj"
+              },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj"
+              },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj"
+              },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj"
               }
             }
           }
@@ -42,6 +54,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.4.1, )"
@@ -69,15 +85,291 @@
         }
       }
     },
-    "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj": {
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj",
-        "projectName": "PS.GeneralProvider",
-        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.GeneralProvider\\PS.GeneralProvider.csproj"
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj",
+        "projectName": "PS.Core",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj",
+        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
       },
       "frameworks": {
-        "net461": {}
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
+        "projectName": "PS.Model",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
+        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj",
+        "projectName": "PS.External.Model",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj",
+        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj"
+              },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj",
+        "projectName": "PS.Proto",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj",
+        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj",
+        "projectName": "PS.Provider",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj",
+        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
       }
     }
   }

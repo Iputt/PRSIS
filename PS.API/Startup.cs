@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using Microsoft.OpenApi.Models;
 using System.IO;
+using PS.API.Extension;
+using AutoMapper;
 
 namespace PS.API
 {
@@ -21,44 +23,36 @@ namespace PS.API
     public class Startup
     {
         /// <summary>
+        /// 配置类-依赖
+        /// </summary>
+        private IConfiguration Configuration;
+
+        /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="configuration"></param>
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, CacheConfig cacheConfig)
         {
             Configuration = configuration;
         }
-
-        /// <summary>
-        /// 配置类-依赖
-        /// </summary>
-        public IConfiguration Configuration { get; }
-
+        
         /// <summary>
         /// 配置服务
         /// </summary>
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            //添加Controllers服务
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "PS API",
-                    Description = "Acting on PS",
-                    Version = "v1",
-                    //TermsOfService="None"
-                    //Contact
-                    //Licecse
-                });
-                //为Swagger JSON and UI设置xml文档注释路径
-                string xmlPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "ps_swagger.xml");
-                c.IncludeXmlComments(xmlPath);
-            });
 
-            //注册缓存服务 - Redis/MemoryCache
-            CacheInjection.Initialize(services, _appsettingConfig.RedisConnection, _appsettingConfig.InstanceName, _appsettingConfig.IsRedis);
+            //添加[获取AppSetting]服务
+            AppSettingInjectioon.Initialize(services);
+
+            //添加Swagger服务
+            SwaggerInjection.Initialize(services);
+
+            //添加AutoMapper服务
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         /// <summary>
@@ -75,13 +69,16 @@ namespace PS.API
             }
             //http
             app.UseHttpsRedirection();
+
             //路由
             app.UseRouting();
+
             //授权
             app.UseAuthorization();
 
             //启用中间件服务生成Swagger作为JSON终结点
             app.UseSwagger();
+
             //启用中间件服务对Swagger-UI，指定Swagger作为JSON终结点
             app.UseSwaggerUI(c =>
             {
