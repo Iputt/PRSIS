@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,28 @@ namespace PS.API.Extension
                 //为Swagger JSON and UI设置xml文档注释路径
                 string xmlPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "ps_swagger.xml");
                 c.IncludeXmlComments(xmlPath);
+                //c.OperationFilter<AddAuthTokenHeaderParameter>();
             });
         }
     }
+
+    //public class AddAuthTokenHeaderParameter : IOperationFilter
+    //{
+    //    public void Apply(OpenApiOperation operation, OperationFilterContext context)
+    //    {
+
+    //        if (operation.Parameters == null)
+    //        {
+    //            operation.Parameters = new List<IParameter>();
+    //        }
+    //        operation.Parameters.Add(new NonBodyParameter()
+    //        {
+    //            Name = "token",
+    //            In = "header",
+    //            Type = "string",
+    //            Description = "token认证信息",
+    //            Required = true
+    //        });
+    //    }
+    //}
 }

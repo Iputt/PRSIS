@@ -4,6 +4,47 @@
         <name>PS.API</name>
     </assembly>
     <members>
+        <member name="T:PS.API.Controllers.Account.AccountController">
+            <summary>
+            账号相关接口
+            </summary>
+        </member>
+        <member name="M:PS.API.Controllers.Account.AccountController.#ctor(PS.API.ILogin,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{PS.API.Controllers.Account.AccountController})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="login"></param>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PS.API.Controllers.Account.AccountController.AddLogin(PS.External.Model.PLoginDto)">
+            <summary>
+            方法实现 - 添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PS.API.Controllers.Account.AccountController.GetUserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Controllers.Base.BaseController">
+            <summary>
+            控制器 - 基础
+            </summary>
+        </member>
+        <member name="F:PS.API.Controllers.Base.BaseController.Config">
+            <summary>
+            缓存配置
+            </summary>
+        </member>
+        <member name="M:PS.API.Controllers.Base.BaseController.#ctor(Microsoft.Extensions.Options.IOptions{PS.API.Extension.CacheConfig})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="setting"></param>
+        </member>
         <member name="T:PS.API.Controllers.CommonController">
             <summary>
             通用接口
@@ -20,6 +61,70 @@
             Ps API 测试接口
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:PS.API.Controllers.CommonController.GetAttachment(System.IO.FileStream)">
+            <summary>
+            获取图片附件
+            </summary>
+            <param name="idsStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Extension.CacheConfig">
+            <summary>
+            映射 - 缓存配置
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.CacheConfig.RedisConnection">
+            <summary>
+            Redis 缓存
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.CacheConfig.InstanceName">
+            <summary>
+            实例名称
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.CacheConfig.IsRedis">
+            <summary>
+            是否使用Redis
+            </summary>
+        </member>
+        <member name="T:PS.API.Extension.AppSettingInjectioon">
+            <summary>
+            服务注入 - Appsetting
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.AppSettingInjectioon.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            初始化 - Appsetting配置
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:PS.API.Extension.CacheInjection">
+            <summary>
+            服务注入 - 缓存
+            </summary>
+        </member>
+        <member name="T:PS.API.Extension.SwaggerInjection">
+            <summary>
+            服务注入 - Swagger
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.SwaggerInjection.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            初始化 - Swagger配置
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:PS.API.Extension.AccountProfile">
+            <summary>
+            账号相关映射
+            </summary>
+        </member>
+        <member name="T:PS.API.ILogin">
+            <summary>
+            接口操作 - Login
+            </summary>
         </member>
         <member name="T:PS.API.Program">
             <summary>
@@ -39,9 +144,25 @@
             <param name="args"></param>
             <returns></returns>
         </member>
+        <member name="T:PS.API.LoginRepository">
+            <summary>
+            数据访问 - Login
+            </summary>
+        </member>
+        <member name="M:PS.API.LoginRepository.#ctor(System.IServiceProvider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
         <member name="T:PS.API.Startup">
             <summary>
             启动
+            </summary>
+        </member>
+        <member name="F:PS.API.Startup.Configuration">
+            <summary>
+            配置类-依赖
             </summary>
         </member>
         <member name="M:PS.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
@@ -49,11 +170,6 @@
             构造函数
             </summary>
             <param name="configuration"></param>
-        </member>
-        <member name="P:PS.API.Startup.Configuration">
-            <summary>
-            配置类-依赖
-            </summary>
         </member>
         <member name="M:PS.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>

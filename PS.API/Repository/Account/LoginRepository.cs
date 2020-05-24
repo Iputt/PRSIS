@@ -8,10 +8,17 @@ using System.Threading.Tasks;
 
 namespace PS.API
 {
+    /// <summary>
+    /// 数据访问 - Login
+    /// </summary>
     public class LoginRepository : ILogin
     {
         private readonly AppDbContext _dbContext;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="serviceProvider"></param>
         public LoginRepository(IServiceProvider serviceProvider)
         {
             _dbContext = serviceProvider.GetService(typeof(AppDbContext)) as AppDbContext;

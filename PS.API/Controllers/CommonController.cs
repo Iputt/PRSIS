@@ -12,7 +12,7 @@ namespace PS.API.Controllers
     /// 通用接口
     /// </summary>
     [ApiController]
-    [Route("v1/[controller]")]
+    [Route("v1/[controller]/[action]")]
     public class CommonController : ControllerBase
     {
         private readonly ILogger<CommonController> _logger;

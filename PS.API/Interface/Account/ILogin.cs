@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PS.API
 {
+    /// <summary>
+    /// 接口操作 - Login
+    /// </summary>
     public interface ILogin
     {
         Task<Login> Add(Login login);

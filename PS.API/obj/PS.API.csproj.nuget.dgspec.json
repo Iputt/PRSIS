@@ -54,6 +54,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.20, )"

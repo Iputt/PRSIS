@@ -14,7 +14,7 @@ namespace PS.API.Controllers.Account
     /// 账号相关接口
     /// </summary>
     [ApiController]
-    [Route("v1/[controller]")]
+    [Route("v1/[controller]/[action]")]
     public class AccountController: ControllerBase
     {
         private readonly ILogin _login;
@@ -23,7 +23,9 @@ namespace PS.API.Controllers.Account
         /// <summary>
         /// 构造函数
         /// </summary>
+        /// <param name="login"></param>
         /// <param name="mapper"></param>
+        /// <param name="logger"></param>
         public AccountController(ILogin login,IMapper mapper, ILogger<AccountController> logger)
         {
             _login = login ?? throw new ArgumentException(nameof(login));
@@ -49,9 +51,12 @@ namespace PS.API.Controllers.Account
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public async Task<List<Login>> GetUserInfo()
+        //[ApiExplorerSettings(IgnoreApi = true)]
+        public async Task<ActionResult<IEnumerable<RLoginDto>>> GetUserInfo()
         {
-            return await _login.GetLoginsAsync();
+            var infoList = await _login.GetLoginsAsync();
+            var dto= _mapper.Map<IEnumerable<RLoginDto>>(infoList);
+            return Ok(dto);
         }
     }
 }

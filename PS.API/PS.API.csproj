@@ -4,7 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp3.1\ps_swagger.xml</DocumentationFile>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.4" />
     <PackageReference Include="MySql.Data" Version="8.0.20" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
   </ItemGroup>
@@ -15,10 +22,6 @@
     <ProjectReference Include="..\PS.Profile\PS.External.Model.csproj" />
     <ProjectReference Include="..\PS.ProtoType\PS.Proto.csproj" />
     <ProjectReference Include="..\PS.Provider\PS.Provider.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\Base\" />
   </ItemGroup>
 
 
