@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PS.Provider.Mapper
+namespace PS.Provider
 {
     class IMapperService
     {

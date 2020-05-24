@@ -43,5 +43,15 @@ namespace PS.API.Controllers.Account
             var result = await _login.Add(login);
             return Ok(result);
         }
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<List<Login>> GetUserInfo()
+        {
+            return await _login.GetLoginsAsync();
+        }
     }
 }

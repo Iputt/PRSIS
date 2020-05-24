@@ -1,17 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using Microsoft.OpenApi.Models;
-using System.IO;
 using PS.API.Extension;
 using AutoMapper;
 
@@ -31,7 +24,7 @@ namespace PS.API
         /// 构造函数
         /// </summary>
         /// <param name="configuration"></param>
-        public Startup(IConfiguration configuration, CacheConfig cacheConfig)
+        public Startup(IConfiguration configuration)//CacheConfig cacheConfig
         {
             Configuration = configuration;
         }
@@ -46,13 +39,15 @@ namespace PS.API
             services.AddControllers();
 
             //添加[获取AppSetting]服务
-            AppSettingInjectioon.Initialize(services);
+            AppSettingInjectioon.Initialize(services, Configuration);
 
             //添加Swagger服务
             SwaggerInjection.Initialize(services);
 
             //添加AutoMapper服务
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddSingleton<ILogin, LoginRepository>();
         }
 
         /// <summary>

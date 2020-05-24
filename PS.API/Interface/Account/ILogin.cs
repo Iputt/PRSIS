@@ -13,5 +13,7 @@ namespace PS.API
         Task<IEnumerable<Login>> GetAll();
 
         Task<Login> GetById(int id);
+
+        Task<List<Login>> GetLoginsAsync();
     }
 }

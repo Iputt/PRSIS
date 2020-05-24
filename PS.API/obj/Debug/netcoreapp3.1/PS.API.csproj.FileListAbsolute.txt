@@ -59,3 +59,14 @@ D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Model.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.External.Model.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Proto.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Provider.pdb
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll

@@ -10,6 +10,13 @@ namespace PS.API
 {
     public class LoginRepository : ILogin
     {
+        private readonly AppDbContext _dbContext;
+
+        public LoginRepository(IServiceProvider serviceProvider)
+        {
+            _dbContext = serviceProvider.GetService(typeof(AppDbContext)) as AppDbContext;
+        }
+
         public string ConnectionString { get; set; }
         public Task<Login> Add(Login login)
         {
@@ -53,6 +60,11 @@ namespace PS.API
                 }
             }
             return list;
+        }
+
+        public async Task<List<Login>> GetLoginsAsync()
+        {
+            return await _dbContext.GetAllInfo<Login>();
         }
     }
 }
