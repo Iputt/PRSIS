@@ -69,7 +69,5 @@ D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\ps_swagger.xml
-D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cs
-D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

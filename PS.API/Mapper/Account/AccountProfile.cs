@@ -5,13 +5,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PS.API.Extension
+namespace PS.API.Mapper
 {
     /// <summary>
     /// 账号相关映射
     /// </summary>
     public class AccountProfile : Profile
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public AccountProfile()
         {
             CreateMap<Login, RLoginDto>()
@@ -19,8 +22,14 @@ namespace PS.API.Extension
                     opt.MapFrom(src=>src.FirstName+src.LastName));
         }
     }
+    /// <summary>
+    /// 登录信息相关映射
+    /// </summary>
     public class LoginProfile : Profile
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public LoginProfile()
         {
             CreateMap<Login, RLoginDto>()

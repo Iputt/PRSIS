@@ -41,6 +41,9 @@ namespace PS.API
             //添加[获取AppSetting]服务
             AppSettingInjectioon.Initialize(services, Configuration);
 
+            //添加Cors跨域服务
+            CorsInjection.Initialize(services);
+
             //添加Swagger服务
             SwaggerInjection.Initialize(services);
 
@@ -84,6 +87,9 @@ namespace PS.API
                 c.DocExpansion(DocExpansion.None);
                 c.DefaultModelsExpandDepth(-1);
             });
+
+            //启用跨域代理服务
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
