@@ -29,7 +29,7 @@ namespace PS.API.Extension
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static string GetValue(string key)
+        public static string GetSection(string key)
         {
             return config[key];
         }

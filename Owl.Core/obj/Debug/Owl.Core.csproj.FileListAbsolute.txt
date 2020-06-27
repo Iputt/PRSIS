@@ -1,0 +1,14 @@
+D:\Data\rp\Owl\Owl.Core\bin\Debug\Owl.Core.dll
+D:\Data\rp\Owl\Owl.Core\bin\Debug\Owl.Core.pdb
+D:\Data\rp\Owl\Owl.Core\bin\Debug\Newtonsoft.Json.dll
+D:\Data\rp\Owl\Owl.Core\obj\Debug\Owl.Core.csprojAssemblyReference.cache
+D:\Data\rp\Owl\Owl.Core\obj\Debug\Owl.Core.csproj.CopyComplete
+D:\Data\rp\Owl\Owl.Core\obj\Debug\Owl.Core.dll
+D:\Data\rp\Owl\Owl.Core\obj\Debug\Owl.Core.pdb
+D:\Data\work\rp\Owl\Owl.Core\bin\Debug\Owl.Core.dll
+D:\Data\work\rp\Owl\Owl.Core\bin\Debug\Owl.Core.pdb
+D:\Data\work\rp\Owl\Owl.Core\bin\Debug\Newtonsoft.Json.dll
+D:\Data\work\rp\Owl\Owl.Core\obj\Debug\Owl.Core.csprojAssemblyReference.cache
+D:\Data\work\rp\Owl\Owl.Core\obj\Debug\Owl.Core.csproj.CopyComplete
+D:\Data\work\rp\Owl\Owl.Core\obj\Debug\Owl.Core.dll
+D:\Data\work\rp\Owl\Owl.Core\obj\Debug\Owl.Core.pdb

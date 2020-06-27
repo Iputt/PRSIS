@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PS.External.Model;
@@ -15,6 +16,7 @@ namespace PS.API.Controllers.Account
     /// </summary>
     [ApiController]
     [Route("v1/[controller]/[action]")]
+    [Authorize]
     public class AccountController: ControllerBase
     {
         private readonly ILogin _login;

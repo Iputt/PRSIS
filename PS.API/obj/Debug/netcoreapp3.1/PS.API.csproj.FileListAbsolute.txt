@@ -71,3 +71,12 @@ D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.Diagnostics.Di
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\ps_swagger.xml
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

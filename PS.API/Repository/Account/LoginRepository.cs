@@ -73,5 +73,10 @@ namespace PS.API
         {
             return await _dbContext.GetAllInfo<Login>();
         }
+
+        public bool IsValid(PLoginDto dto)
+        {
+            return true;
+        }
     }
 }

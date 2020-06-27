@@ -29,6 +29,24 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:PS.API.Controllers.Auth.AuthenticationController">
+            <summary>
+            jwt权限验证
+            </summary>
+        </member>
+        <member name="M:PS.API.Controllers.Auth.AuthenticationController.#ctor(PS.API.Interface.IAuthenticateService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="authService"></param>
+        </member>
+        <member name="M:PS.API.Controllers.Auth.AuthenticationController.GetToken(PS.External.Model.PLoginDto)">
+            <summary>
+            获取token
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="T:PS.API.Controllers.Base.BaseController">
             <summary>
             控制器 - 基础
@@ -89,6 +107,46 @@
             是否使用Redis
             </summary>
         </member>
+        <member name="T:PS.API.Extension.ConfigHelper">
+            <summary>
+            appsettings.json配置文件帮助类
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.ConfigHelper.#cctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.ConfigHelper.GetSection(System.String)">
+            <summary>
+            根据key获取对应的配置值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PS.API.Extension.ConfigHelper.GetConnectionString(System.String)">
+            <summary>
+            获取ConnectionStrings下默认的配置连接字符串
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PS.API.Extension.ConfigHelper.GetSectionModel``1(System.String)">
+            <summary>
+            appsettings.json 子节点转实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:PS.API.Extension.ConfigHelper.GetSubValue(System.String)">
+            <summary>
+            从appsettings.json获取key的值
+            取RabbitMQ下的HostName的值，则参数key为 RabbitMQ:HostName
+            </summary>
+            <param name="key">key</param>
+            <returns></returns>
+        </member>
         <member name="T:PS.API.Extension.AppSettingInjectioon">
             <summary>
             服务注入 - Appsetting
@@ -105,6 +163,28 @@
             服务注入 - 缓存
             </summary>
         </member>
+        <member name="T:PS.API.Extension.CorsInjection">
+            <summary>
+            服务注入 - CORS 跨域
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.CorsInjection.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            初始化 - CORS配置
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:PS.API.Extension.Injection.JwtInjection">
+            <summary>
+            服务注入 - Jwt验证
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.Injection.JwtInjection.Initialize(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            初始化 - Jwt配置
+            </summary>
+            <param name="services"></param>
+        </member>
         <member name="T:PS.API.Extension.SwaggerInjection">
             <summary>
             服务注入 - Swagger
@@ -116,14 +196,156 @@
             </summary>
             <param name="services"></param>
         </member>
-        <member name="T:PS.API.Extension.AccountProfile">
+        <member name="T:PS.API.Extension.Jwt.IJwt">
             <summary>
-            账号相关映射
+            接口 - Jwt
             </summary>
+        </member>
+        <member name="M:PS.API.Extension.Jwt.IJwt.GetToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            获取token
+            </summary>
+            <param name="Clims"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PS.API.Extension.Jwt.IJwt.ValidateToken(System.String,System.Collections.Generic.Dictionary{System.String,System.String}@)">
+            <summary>
+            验证token
+            </summary>
+            <param name="Token"></param>
+            <param name="Clims"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Extension.Jwt.Jwt">
+            <summary>
+            接口实现 - Jwt
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.Jwt.Jwt.GetSecret">
+            <summary>
+            获取到加密串
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.Jwt.Jwt.GetToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            生成Token
+            </summary>
+            <param name="Claims"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Extension.Jwt.JwtConfig">
+            <summary>
+            配置类 - Jwt
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.Issuer">
+            <summary>
+            发布者
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.Audience">
+            <summary>
+            订阅者
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.SecretKey">
+            <summary>
+            加密key
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.Lifetime">
+            <summary>
+            生命周期
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.ValidateLifetime">
+            <summary>
+            是否验证生命周期
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.HeadField">
+            <summary>
+            验证头字段
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.Prefix">
+            <summary>
+            jwt验证前缀
+            </summary>
+        </member>
+        <member name="P:PS.API.Extension.Jwt.JwtConfig.IgnoreUrls">
+            <summary>
+            忽略验证的url
+            </summary>
+        </member>
+        <member name="T:PS.API.Extension.Jwt.UseUseJwtMiddlewareExtensions">
+            <summary>
+            中间件 - UseJwt
+            </summary>
+        </member>
+        <member name="M:PS.API.Extension.Jwt.UseUseJwtMiddlewareExtensions.UseJwt(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            权限检查
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
         </member>
         <member name="T:PS.API.ILogin">
             <summary>
             接口操作 - Login
+            </summary>
+        </member>
+        <member name="T:PS.API.Interface.IAuthenticateService">
+            <summary>
+            接口 - Jwt验证
+            </summary>
+        </member>
+        <member name="M:PS.API.Interface.IAuthenticateService.IsAuthenticated(PS.External.Model.PLoginDto,System.String@)">
+            <summary>
+            是否通过验证
+            </summary>
+            <param name="dto"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Interface.TokenAuthenticationService">
+            <summary>
+            实现 - Jwt验证
+            </summary>
+        </member>
+        <member name="M:PS.API.Interface.TokenAuthenticationService.#ctor(PS.API.ILogin,Microsoft.Extensions.Options.IOptions{PS.API.Extension.TokenManagement})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="login"></param>
+            <param name="tokenManagement"></param>
+        </member>
+        <member name="M:PS.API.Interface.TokenAuthenticationService.IsAuthenticated(PS.External.Model.PLoginDto,System.String@)">
+            <summary>
+            是否通过验证
+            </summary>
+            <param name="dto"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PS.API.Mapper.AccountProfile">
+            <summary>
+            账号相关映射
+            </summary>
+        </member>
+        <member name="M:PS.API.Mapper.AccountProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:PS.API.Mapper.LoginProfile">
+            <summary>
+            登录信息相关映射
+            </summary>
+        </member>
+        <member name="M:PS.API.Mapper.LoginProfile.#ctor">
+            <summary>
+            构造函数
             </summary>
         </member>
         <member name="T:PS.API.Program">

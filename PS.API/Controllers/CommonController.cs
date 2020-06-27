@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PS.API.Controllers
 {
@@ -13,6 +14,7 @@ namespace PS.API.Controllers
     /// </summary>
     [ApiController]
     [Route("v1/[controller]/[action]")]
+    [Authorize]
     public class CommonController : ControllerBase
     {
         private readonly ILogger<CommonController> _logger;

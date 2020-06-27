@@ -13,7 +13,7 @@ namespace PS.API.Extension
     public class CorsInjection
     {
         /// <summary>
-        /// 初始化 - Swagger配置
+        /// 初始化 - CORS配置
         /// </summary>
         /// <param name="services"></param>
         public static void Initialize(IServiceCollection services)

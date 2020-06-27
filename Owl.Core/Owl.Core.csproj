@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B73AD03A-0E66-493E-B4A9-9B760FF4F7B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Owl</RootNamespace>
+    <AssemblyName>Owl.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Const\Core.cs" />
+    <Compile Include="Core\AppContext.cs" />
+    <Compile Include="Core\Box.cs" />
+    <Compile Include="Core\OrderlyDict.cs" />
+    <Compile Include="Core\KeyValuePair.cs" />
+    <Compile Include="Domain\Driver\Repository\Rest\SpecificationTranslator.cs" />
+    <Compile Include="Feature\Impl\Config\ConfigProvider.cs" />
+    <Compile Include="Feature\Impl\Script\Api\DateApi.cs" />
+    <Compile Include="Feature\Impl\Script\Api\LinqApi.cs" />
+    <Compile Include="Feature\Impl\Script\Api\RepositoryScriptApi.cs" />
+    <Compile Include="Feature\Impl\Script\ScriptRuntime.cs" />
+    <Compile Include="Domain\Driver\Repository\RepositoryRunning.cs" />
+    <Compile Include="Domain\Meta\Attributes\CustomObjectTemplateAttribute.cs" />
+    <Compile Include="Domain\Meta\TmpOption.cs" />
+    <Compile Include="Feature\Client.cs" />
+    <Compile Include="Core\Exception2.cs" />
+    <Compile Include="Core\LimitQueue.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\MsSql\Mssql2012RepositoryProvider.cs" />
+    <Compile Include="Feature\Application.cs" />
+    <Compile Include="Feature\Impl\Cache\InprocCache.cs" />
+    <Compile Include="Core\Comparer.cs" />
+    <Compile Include="Core\DateMonth.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Feature\Impl\Cache\ICache.cs" />
+    <Compile Include="Core\Linq\Dynamic.cs" />
+    <Compile Include="Core\Linq\DynamicQueryable.cs" />
+    <Compile Include="Core\Linq\Query.cs" />
+    <Compile Include="Core\Linq\QueryableExt.cs" />
+    <Compile Include="Core\MethodInvoker.cs" />
+    <Compile Include="Core\Object2.cs" />
+    <Compile Include="Core\ObjectContainer.cs" />
+    <Compile Include="Core\ObjectExtention.cs" />
+    <Compile Include="Core\Response.cs" />
+    <Compile Include="Core\SyncCollection.cs" />
+    <Compile Include="Core\TransferObject.cs" />
+    <Compile Include="Domain\DomainContext.cs" />
+    <Compile Include="Domain\Driver\DomainTracer.cs" />
+    <Compile Include="Domain\Driver\Repository\Cached\CachedRepositoryContext.cs" />
+    <Compile Include="Domain\Driver\Repository\Cached\CachedRepositoryProvider.cs" />
+    <Compile Include="Domain\Driver\Repository\Cached\DelegateTranslator.cs" />
+    <Compile Include="Domain\Driver\Repository\CacheKey.cs" />
+    <Compile Include="Domain\Driver\Repository\RepositoryContext.cs" />
+    <Compile Include="Domain\Driver\Repository\RepositoryProviderFactory.cs" />
+    <Compile Include="Domain\Driver\Repository\RepositoryProvider`1.cs" />
+    <Compile Include="Domain\Driver\Repository\SmartQueryProvider.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\Common\ConnectionConfigElement.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\Common\SqlRepositoryContext.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\Common\SqlRepositoryProvider.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\Common\SqlTranslator.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\Common\SqlUnit.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\MsSql\MssqlRepositoryContext.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\MsSql\MssqlRepositoryProvider.cs" />
+    <Compile Include="Domain\Driver\Repository\Sql\MsSql\MssqlTranslator.cs" />
+    <Compile Include="Domain\Driver\Repository\TranslatorParameter.cs" />
+    <Compile Include="Domain\Driver\Repository\UIDataParser.cs" />
+    <Compile Include="Domain\Driver\UnitOfWork.cs" />
+    <Compile Include="Domain\ExpressionSpecification.cs" />
+    <Compile Include="Domain\Factory.cs" />
+    <Compile Include="Domain\ListItem.cs" />
+    <Compile Include="Domain\Meta\Attributes\DomainField.cs" />
+    <Compile Include="Domain\Meta\Attributes\DomainModel.cs" />
+    <Compile Include="Domain\Meta\Attributes\Enums.cs" />
+    <Compile Include="Domain\Meta\Attributes\IndexAttribute.cs" />
+    <Compile Include="Domain\Authorize.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\EqualtoValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\LengthValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\NumberValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\RegexValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\RemoteValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\RequiredValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\SingleValidator.cs" />
+    <Compile Include="Domain\Meta\Attributes\Validation\Validator.cs" />
+    <Compile Include="Domain\Meta\Engine\MetaEngine.cs" />
+    <Compile Include="Domain\Meta\Engine\MetaProvider.cs" />
+    <Compile Include="Domain\Meta\Engine\ReflectMetaProvider.cs" />
+    <Compile Include="Domain\Meta\ModelMetadata\FieldMetadata.cs" />
+    <Compile Include="Domain\Meta\ModelMetadata\ModelMetadata.cs" />
+    <Compile Include="Domain\Meta\ModelMetadata\ModelMetadataEngine.cs" />
+    <Compile Include="Domain\Models\Base\DomainJsonConverter.cs" />
+    <Compile Include="Domain\Models\Base\DomainObject.cs" />
+    <Compile Include="Domain\Models\Base\FastInvoker.cs" />
+    <Compile Include="Domain\Models\Base\IModels.cs" />
+    <Compile Include="Domain\Models\Base\PropertyIndexer.cs" />
+    <Compile Include="Domain\Models\Behavior\BehaviorObject.cs" />
+    <Compile Include="Domain\Models\Behavior\FormObject.cs" />
+    <Compile Include="Domain\Models\Persist\AggRoot.cs" />
+    <Compile Include="Domain\Models\Persist\Entity.cs" />
+    <Compile Include="Domain\Models\Persist\PersistObject.cs" />
+    <Compile Include="Domain\Models\Persist\RelatedEnd.cs" />
+    <Compile Include="Domain\Models\Persist\RootEventHandler.cs" />
+    <Compile Include="Domain\Models\SmartObject.cs" />
+    <Compile Include="Domain\Models\Smart\Attributes.cs" />
+    <Compile Include="Domain\Models\Smart\SmartEntity.cs" />
+    <Compile Include="Domain\Models\Smart\SmartForm.cs" />
+    <Compile Include="Domain\Models\Smart\SmartMessageHandler.cs" />
+    <Compile Include="Domain\Models\Smart\SmartModel.cs" />
+    <Compile Include="Domain\Models\Smart\SmartRoot.cs" />
+    <Compile Include="Domain\Msg\Impl\MessageProvider.cs" />
+    <Compile Include="Domain\Msg\Impl\MethodReflactorMessageProvider.cs" />
+    <Compile Include="Domain\Msg\Impl\ModelReflactorMessageProvider.cs" />
+    <Compile Include="Domain\Msg\Impl\MsgPersist.cs" />
+    <Compile Include="Domain\Msg\Message.cs" />
+    <Compile Include="Domain\Msg\MsgBehavior.cs" />
+    <Compile Include="Domain\MsgBus.cs" />
+    <Compile Include="Domain\Msg\MsgContext.cs" />
+    <Compile Include="Domain\Msg\MsgDescrip.cs" />
+    <Compile Include="Domain\Msg\MsgHandler.cs" />
+    <Compile Include="Domain\Msg\MsgRegister.cs" />
+    <Compile Include="Domain\Msg\MsgWrap.cs" />
+    <Compile Include="Domain\RelateHelper.cs" />
+    <Compile Include="Domain\Repository`1.cs" />
+    <Compile Include="Domain\RootCache.cs" />
+    <Compile Include="Domain\SortOrder.cs" />
+    <Compile Include="Domain\Specification.cs" />
+    <Compile Include="Domain\Tree.cs" />
+    <Compile Include="Domain\Scene.cs" />
+    <Compile Include="Feature\Cache.cs" />
+    <Compile Include="Feature\Impl\Cache\OutprocCache.cs" />
+    <Compile Include="Feature\Impl\Log\ActionLog.cs" />
+    <Compile Include="Feature\Impl\Log\MessageLog.cs" />
+    <Compile Include="Feature\Impl\Script\JScriptProvider.cs" />
+    <Compile Include="Feature\Impl\Script\ScriptProvider.cs" />
+    <Compile Include="Feature\Impl\Select\MetaSelectProvider.cs" />
+    <Compile Include="Feature\Impl\Select\SelectEngine.cs" />
+    <Compile Include="Feature\Impl\Select\SelectProvicer.cs" />
+    <Compile Include="Feature\Impl\MQ\MQProvider.cs" />
+    <Compile Include="Feature\Impl\Select\TemplateSelectProvider.cs" />
+    <Compile Include="Feature\Impl\Template\TemplateProvider.cs" />
+    <Compile Include="Feature\Impl\Translation\TranslationProvider.cs" />
+    <Compile Include="Feature\Impl\Variable\VariableProvider.cs" />
+    <Compile Include="Feature\Locker.cs" />
+    <Compile Include="Feature\Log.cs" />
+    <Compile Include="Feature\LogFile.cs" />
+    <Compile Include="Feature\Maintenance.cs" />
+    <Compile Include="Feature\Script.cs" />
+    <Compile Include="Feature\Select.cs" />
+    <Compile Include="Feature\MessageQueue.cs" />
+    <Compile Include="Feature\TaskMgr.cs" />
+    <Compile Include="Feature\Template.cs" />
+    <Compile Include="Feature\SfConfig.cs" />
+    <Compile Include="Feature\Translation.cs" />
+    <Compile Include="Feature\Variable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\AppConfig.cs" />
+    <Compile Include="Util\AsmHelper.cs" />
+    <Compile Include="Util\BaiDuOCR.cs" />
+    <Compile Include="Util\CheckHelper.cs" />
+    <Compile Include="Util\Convert.cs" />
+    <Compile Include="Util\Crypto.cs" />
+    <Compile Include="Util\DTHelper.cs" />
+    <Compile Include="Util\EnumHelper.cs" />
+    <Compile Include="Util\ExcelHelper.cs" />
+    <Compile Include="Util\ExceptionHelper.cs" />
+    <Compile Include="Util\ExportHelper.cs" />
+    <Compile Include="Util\ExprHelper.cs" />
+    <Compile Include="Util\FileHelper.cs" />
+    <Compile Include="Util\Impl\AppConfig\SkigConfigSection.cs" />
+    <Compile Include="Util\Impl\FileHelper\ContentType.cs" />
+    <Compile Include="Util\Impl\FileHelper\ContentTypeProvider.cs" />
+    <Compile Include="Util\JsonHelper.cs" />
+    <Compile Include="Util\RepHelper.cs" />
+    <Compile Include="Util\Serial.cs" />
+    <Compile Include="Util\StringHelper.cs" />
+    <Compile Include="Util\TypeHelper.cs" />
+    <Compile Include="Util\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Util\Impl\FileHelper\content-type.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

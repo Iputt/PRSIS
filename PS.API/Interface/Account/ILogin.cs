@@ -1,4 +1,5 @@
-﻿using PS.Model;
+﻿using PS.External.Model;
+using PS.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,7 @@ namespace PS.API
         Task<Login> GetById(int id);
 
         Task<List<Login>> GetLoginsAsync();
+
+        bool IsValid(PLoginDto dto);
     }
 }

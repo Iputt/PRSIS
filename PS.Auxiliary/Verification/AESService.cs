@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace PS.Auxiliary.Verification
@@ -82,4 +83,5 @@ namespace PS.Auxiliary.Verification
             }
             return result;
         }
+    }
 }

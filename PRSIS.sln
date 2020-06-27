@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.External.Model", "PS.Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Model", "PS.Model\PS.Model.csproj", "{F0FF367D-7460-4279-8BD0-0A23EA95F7D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Auxiliary", "PS.Auxiliary\PS.Auxiliary.csproj", "{01F26E4C-D547-41F4-91B0-295430FA3A2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Auxiliary", "PS.Auxiliary\PS.Auxiliary.csproj", "{01F26E4C-D547-41F4-91B0-295430FA3A2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.BaseRepository", "PS.BaseRepository\PS.BaseRepository.csproj", "{A958D0AC-77D6-41EA-BE54-60B88D770966}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{01F26E4C-D547-41F4-91B0-295430FA3A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F26E4C-D547-41F4-91B0-295430FA3A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F26E4C-D547-41F4-91B0-295430FA3A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A958D0AC-77D6-41EA-BE54-60B88D770966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A958D0AC-77D6-41EA-BE54-60B88D770966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A958D0AC-77D6-41EA-BE54-60B88D770966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A958D0AC-77D6-41EA-BE54-60B88D770966}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{F0511A3A-2053-4637-8510-80E1BC8E314C} = {5F817724-3C13-4FDE-88DD-89B8F695F965}
 		{F0FF367D-7460-4279-8BD0-0A23EA95F7D0} = {5F817724-3C13-4FDE-88DD-89B8F695F965}
 		{01F26E4C-D547-41F4-91B0-295430FA3A2A} = {1FF461DA-7B03-428B-AC32-0BE91091A96D}
+		{A958D0AC-77D6-41EA-BE54-60B88D770966} = {5F817724-3C13-4FDE-88DD-89B8F695F965}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E880BB2-8A9E-4FE2-81E3-49E1D52B003D}

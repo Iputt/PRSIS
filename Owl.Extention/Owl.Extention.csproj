@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0F91260-083D-4375-873A-5A584C1DDAF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Owl</RootNamespace>
+    <AssemblyName>Owl.Extention</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpCompress">
+      <HintPath>..\Lib\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AccountType.cs" />
+    <Compile Include="Const\General.cs" />
+    <Compile Include="Const\Message.cs" />
+    <Compile Include="Const\RoleLevel.cs" />
+    <Compile Include="Const\SelectConst.cs" />
+    <Compile Include="Domain\Driver\Rest\RestRepositoryContext.cs" />
+    <Compile Include="Domain\Driver\Rest\RestRepositoryProvider.cs" />
+    <Compile Include="Domain\RestfulApi.cs" />
+    <Compile Include="Domain\Stateflow.cs" />
+    <Compile Include="Domain\UIRecordTranslateProvider.cs" />
+    <Compile Include="Feature\Attach.cs" />
+    <Compile Include="Feature\Auth.cs" />
+    <Compile Include="Feature\Config.cs" />
+    <Compile Include="Feature\Impl\Assignment\AssignmentEngine.cs" />
+    <Compile Include="Feature\Impl\Assignment\AssignmentProvider.cs" />
+    <Compile Include="Feature\Impl\Assignment\Category.cs" />
+    <Compile Include="Feature\Impl\Assignment\HandleIssueAttribute.cs" />
+    <Compile Include="Feature\Impl\Attach\AttachProvider.cs" />
+    <Compile Include="Feature\Impl\Auth\FilterEngine.cs" />
+    <Compile Include="Feature\Impl\Auth\RoleAttribute.cs" />
+    <Compile Include="Feature\Impl\Auth\AuthEngine.cs" />
+    <Compile Include="Feature\Impl\Auth\AuthProvider.cs" />
+    <Compile Include="Feature\Impl\Auth\Role.cs" />
+    <Compile Include="Feature\Impl\Config\Section.cs" />
+    <Compile Include="Feature\Impl\Config\SectionEngine.cs" />
+    <Compile Include="Feature\Impl\Config\SectionProvider.cs" />
+    <Compile Include="Feature\Impl\ExtraSearch\ExtraSearchEngine.cs" />
+    <Compile Include="Feature\Impl\ExtraSearch\ExtraSearchProvider.cs" />
+    <Compile Include="Feature\Impl\HR\HREngine.cs" />
+    <Compile Include="Feature\Impl\HR\HRProvider.cs" />
+    <Compile Include="Feature\Impl\HR\HRObjects.cs" />
+    <Compile Include="Feature\Impl\Import\ImportMapProvider.cs" />
+    <Compile Include="Feature\Impl\Import\MapEngine.cs" />
+    <Compile Include="Feature\Impl\Import\MetaImportMapProvider.cs" />
+    <Compile Include="Feature\Impl\Member\MemberEngine.cs" />
+    <Compile Include="Feature\Impl\Member\MemberProvider.cs" />
+    <Compile Include="Feature\Impl\Module\ModuleEngine.cs" />
+    <Compile Include="Feature\Impl\Module\ModuleProvider.cs" />
+    <Compile Include="Feature\Impl\Pdf\PdfProvider.cs" />
+    <Compile Include="Feature\Impl\Plan\EmbedPlanProvider.cs" />
+    <Compile Include="Feature\Impl\Plan\PlanEngine.cs" />
+    <Compile Include="Feature\Impl\Plan\PlanHandler.cs" />
+    <Compile Include="Feature\Impl\Plan\PlanProvider.cs" />
+    <Compile Include="Feature\Impl\Plan\PlanState.cs" />
+    <Compile Include="Feature\Impl\Plan\Trigger.cs" />
+    <Compile Include="Feature\Impl\Auth\RoleEngine.cs" />
+    <Compile Include="Feature\Impl\Auth\RoleProvider.cs" />
+    <Compile Include="Feature\Impl\Select\AuthSelectProvider.cs" />
+    <Compile Include="Feature\Impl\Select\PlanSelectProvicer.cs" />
+    <Compile Include="Feature\Impl\Variable\InnerVariableProvider.cs" />
+    <Compile Include="Feature\Member.cs" />
+    <Compile Include="Feature\Module.cs" />
+    <Compile Include="Feature\HR.cs" />
+    <Compile Include="Feature\Pdf.cs" />
+    <Compile Include="Feature\Plan.cs" />
+    <Compile Include="Feature\Smtp.cs" />
+    <Compile Include="Feature\UpdatePatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\HttpProxy.cs" />
+    <Compile Include="Util\BizConfig.cs" />
+    <Compile Include="Util\ImportHandler.cs" />
+    <Compile Include="Util\MetaPacker.cs" />
+    <Compile Include="Util\ModelDump.cs" />
+    <Compile Include="Util\ZipHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Owl.Core\Owl.Core.csproj">
+      <Project>{B73AD03A-0E66-493E-B4A9-9B760FF4F7B0}</Project>
+      <Name>Owl.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Feature\Impl\Role\" />
+    <Folder Include="Util\Impl\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

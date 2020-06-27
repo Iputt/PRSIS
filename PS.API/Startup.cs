@@ -7,6 +7,12 @@ using Microsoft.Extensions.Hosting;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using PS.API.Extension;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using PS.API.Interface;
+using PS.API.Extension.Injection;
+using PS.API.Extension.Jwt;
 
 namespace PS.API
 {
@@ -35,22 +41,28 @@ namespace PS.API
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            //添加Controllers服务
-            services.AddControllers();
-
             //添加[获取AppSetting]服务
             AppSettingInjectioon.Initialize(services, Configuration);
 
             //添加Cors跨域服务
-            CorsInjection.Initialize(services);
+            //CorsInjection.Initialize(services);
+
+            //添加JWT验证服务
+            JwtInjection.Initialize(services, Configuration);
+            //services.AddTransient<IJwt, Jwt>();
 
             //添加Swagger服务
             SwaggerInjection.Initialize(services);
 
             //添加AutoMapper服务
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
+            //添加Controllers服务
+            services.AddControllers();
 
             services.AddSingleton<ILogin, LoginRepository>();
+
+            services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
         }
 
         /// <summary>
@@ -65,8 +77,16 @@ namespace PS.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //启用跨域代理服务
+            //app.UseCors("CorsPolicy");
+
             //http
             app.UseHttpsRedirection();
+
+            //Jwt认证
+            app.UseAuthentication();
+            //app.UseJwt();
 
             //路由
             app.UseRouting();
@@ -88,9 +108,7 @@ namespace PS.API
                 c.DefaultModelsExpandDepth(-1);
             });
 
-            //启用跨域代理服务
-            app.UseCors("CorsPolicy");
-
+            //端点配置       
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
