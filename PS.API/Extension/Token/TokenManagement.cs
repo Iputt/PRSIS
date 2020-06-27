@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PS.API.Extension
 {
+    /// <summary>
+    /// 配置类 - Jwt
+    /// </summary>
     public class TokenManagement
     {
         [JsonProperty("secret")]
