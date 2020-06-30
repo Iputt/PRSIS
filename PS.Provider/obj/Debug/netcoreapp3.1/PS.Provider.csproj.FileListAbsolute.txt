@@ -1,8 +1,8 @@
 D:\Data\project\prsis\PRSIS\PS.Provider\bin\Debug\netcoreapp3.1\PS.Provider.deps.json
 D:\Data\project\prsis\PRSIS\PS.Provider\bin\Debug\netcoreapp3.1\PS.Provider.dll
+D:\Data\project\prsis\PRSIS\PS.Provider\bin\Debug\netcoreapp3.1\PS.Provider.pdb
+D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.csprojAssemblyReference.cache
 D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.AssemblyInfoInputs.cache
 D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.AssemblyInfo.cs
-D:\Data\project\prsis\PRSIS\PS.Provider\bin\Debug\netcoreapp3.1\PS.Provider.pdb
 D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.dll
 D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.pdb
-D:\Data\project\prsis\PRSIS\PS.Provider\obj\Debug\netcoreapp3.1\PS.Provider.csprojAssemblyReference.cache

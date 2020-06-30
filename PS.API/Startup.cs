@@ -13,6 +13,7 @@ using System.Text;
 using PS.API.Interface;
 using PS.API.Extension.Injection;
 using PS.API.Extension.Jwt;
+using Newtonsoft.Json.Serialization;
 
 namespace PS.API
 {
@@ -56,9 +57,18 @@ namespace PS.API
 
             //添加AutoMapper服务
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            
+
             //添加Controllers服务
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(option=> {
+                option.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            });
+
+            //添加Api版本控制
+            services.AddApiVersioning(option => {
+                option.ReportApiVersions = true;
+                option.AssumeDefaultVersionWhenUnspecified = true;
+                option.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+            });
 
             services.AddSingleton<ILogin, LoginRepository>();
 
@@ -101,6 +111,7 @@ namespace PS.API
             app.UseSwaggerUI(c =>
             {
                 //生成json文档
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "PS API V2");
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "PS API V1");
                 //如果设置根目录为swagger，将此值置空
                 c.RoutePrefix = "";

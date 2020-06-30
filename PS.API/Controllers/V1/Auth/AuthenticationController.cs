@@ -12,8 +12,9 @@ namespace PS.API.Controllers.Auth
     /// <summary>
     /// jwt权限验证
     /// </summary>
+    [ApiVersion("1")]
+    [Route("api/v{version:apiVersion}/[controller]/[action]")]
     [ApiController]
-    [Route("api/[controller]/[action]")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthenticateService _authService;

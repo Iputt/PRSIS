@@ -14,9 +14,10 @@ namespace PS.API.Controllers.Account
     /// <summary>
     /// 账号相关接口
     /// </summary>
-    [ApiController]
-    [Route("v1/[controller]/[action]")]
+    [ApiVersion("1")]
+    [Route("api/v{version:apiVersion}/[controller]/[action]")]
     [Authorize]
+    [ApiController]
     public class AccountController: ControllerBase
     {
         private readonly ILogin _login;

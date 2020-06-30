@@ -12,8 +12,9 @@ namespace PS.API.Controllers
     /// <summary>
     /// 通用接口
     /// </summary>
+    [ApiVersion("2")]
     [ApiController]
-    [Route("v1/[controller]/[action]")]
+    [Route("api/v{version:apiVersion}/[controller]/[action]")]
     [Authorize]
     public class CommonController : ControllerBase
     {

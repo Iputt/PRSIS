@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
@@ -32,9 +33,33 @@ namespace PS.API.Extension
                     //Contact
                     //Licecse
                 });
+                c.SwaggerDoc("v2", new OpenApiInfo
+                {
+                    Title = "PS API",
+                    Description = "Acting on PS",
+                    Version = "v2",
+                    //TermsOfService="None"
+                    //Contact
+                    //Licecse
+                });
+
+                c.DocInclusionPredicate((docName, apiDesc) =>
+                {
+                    var versions = apiDesc.CustomAttributes().OfType<ApiVersionAttribute>()
+                    .SelectMany(attr => attr.Versions);
+
+                    return versions.Any(v => $"v{v.ToString()}" == docName);
+                });
+
+                c.OperationFilter<RemoveVersionParameterOperationFilter>();
+                c.DocumentFilter<SetVersionInPathDocumentFilter>();
+
                 //为Swagger JSON and UI设置xml文档注释路径
                 string xmlPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "ps_swagger.xml");
+
                 c.IncludeXmlComments(xmlPath);
+
+                //c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"Demo.Model.xml"),true);
                 //c.OperationFilter<AddAuthTokenHeaderParameter>();
             });
         }
@@ -59,4 +84,37 @@ namespace PS.API.Extension
     //        });
     //    }
     //}
+
+    /// <summary>
+    /// 自定义api版本注释过滤
+    /// </summary>
+    public class SetVersionInPathDocumentFilter : IDocumentFilter
+    {
+        public void Apply(OpenApiDocument swaggerDoc,DocumentFilterContext context)
+        {
+            var updatePaths = new OpenApiPaths();
+
+            foreach(var entry in swaggerDoc.Paths)
+            {
+                updatePaths.Add(
+                    entry.Key.Replace("v{version}", swaggerDoc.Info.Version),
+                    entry.Value);
+            }
+
+            swaggerDoc.Paths = updatePaths;
+        }
+    }
+
+    /// <summary>
+    /// 自定义api版本参数过滤
+    /// </summary>
+    public class RemoveVersionParameterOperationFilter : IOperationFilter
+    {
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+            // Remove version parameter from all Operations
+            var versionParameter = operation.Parameters.Single(p => p.Name == "version");
+            operation.Parameters.Remove(versionParameter);
+        }
+    }
 }

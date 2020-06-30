@@ -196,6 +196,16 @@
             </summary>
             <param name="services"></param>
         </member>
+        <member name="T:PS.API.Extension.SetVersionInPathDocumentFilter">
+            <summary>
+            自定义api版本注释过滤
+            </summary>
+        </member>
+        <member name="T:PS.API.Extension.RemoveVersionParameterOperationFilter">
+            <summary>
+            自定义api版本参数过滤
+            </summary>
+        </member>
         <member name="T:PS.API.Extension.Jwt.IJwt">
             <summary>
             接口 - Jwt
@@ -289,6 +299,11 @@
             </summary>
             <param name="builder"></param>
             <returns></returns>
+        </member>
+        <member name="T:PS.API.Extension.TokenManagement">
+            <summary>
+            配置类 - Jwt
+            </summary>
         </member>
         <member name="T:PS.API.ILogin">
             <summary>
