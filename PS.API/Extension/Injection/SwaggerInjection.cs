@@ -57,10 +57,23 @@ namespace PS.API.Extension
                 //为Swagger JSON and UI设置xml文档注释路径
                 string xmlPath = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "ps_swagger.xml");
 
-                c.IncludeXmlComments(xmlPath);
+                c.IncludeXmlComments(xmlPath,true);
 
-                //c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"Demo.Model.xml"),true);
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"externalmodel.xml"),true);
                 //c.OperationFilter<AddAuthTokenHeaderParameter>();
+
+                //添加Bearer Token验证
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    { new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference()
+                        {
+                            Id = "Bearer",
+                            Type = ReferenceType.SecurityScheme
+                        }
+                    }, Array.Empty<string>() }
+                });
             });
         }
     }

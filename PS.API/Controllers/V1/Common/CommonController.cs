@@ -12,7 +12,7 @@ namespace PS.API.Controllers
     /// <summary>
     /// 通用接口
     /// </summary>
-    [ApiVersion("2")]
+    [ApiVersion("1")]
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]/[action]")]
     [Authorize]

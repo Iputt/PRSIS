@@ -1,0 +1,16 @@
+D:\Data\project\prsis\PRSIS\PS.ProtoType\bin\Debug\netcoreapp3.1\PS.Proto.deps.json
+D:\Data\project\prsis\PRSIS\PS.ProtoType\bin\Debug\netcoreapp3.1\PS.Proto.dll
+D:\Data\project\prsis\PRSIS\PS.ProtoType\bin\Debug\netcoreapp3.1\PS.Proto.pdb
+D:\Data\project\prsis\PRSIS\PS.ProtoType\obj\Debug\netcoreapp3.1\PS.Proto.csprojAssemblyReference.cache
+D:\Data\project\prsis\PRSIS\PS.ProtoType\obj\Debug\netcoreapp3.1\PS.Proto.AssemblyInfoInputs.cache
+D:\Data\project\prsis\PRSIS\PS.ProtoType\obj\Debug\netcoreapp3.1\PS.Proto.AssemblyInfo.cs
+D:\Data\project\prsis\PRSIS\PS.ProtoType\obj\Debug\netcoreapp3.1\PS.Proto.dll
+D:\Data\project\prsis\PRSIS\PS.ProtoType\obj\Debug\netcoreapp3.1\PS.Proto.pdb
+D:\Data\project\prsis\PRSIS\PS.Proto\bin\Debug\netcoreapp3.1\PS.Proto.deps.json
+D:\Data\project\prsis\PRSIS\PS.Proto\bin\Debug\netcoreapp3.1\PS.Proto.dll
+D:\Data\project\prsis\PRSIS\PS.Proto\bin\Debug\netcoreapp3.1\PS.Proto.pdb
+D:\Data\project\prsis\PRSIS\PS.Proto\obj\Debug\netcoreapp3.1\PS.Proto.csprojAssemblyReference.cache
+D:\Data\project\prsis\PRSIS\PS.Proto\obj\Debug\netcoreapp3.1\PS.Proto.AssemblyInfoInputs.cache
+D:\Data\project\prsis\PRSIS\PS.Proto\obj\Debug\netcoreapp3.1\PS.Proto.AssemblyInfo.cs
+D:\Data\project\prsis\PRSIS\PS.Proto\obj\Debug\netcoreapp3.1\PS.Proto.dll
+D:\Data\project\prsis\PRSIS\PS.Proto\obj\Debug\netcoreapp3.1\PS.Proto.pdb

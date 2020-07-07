@@ -30,14 +30,11 @@
               "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj": {
                 "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Core\\PS.Core.csproj"
               },
+              "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\PS.External.Model.csproj": {
+                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\PS.External.Model.csproj"
+              },
               "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
                 "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj"
-              },
-              "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj": {
-                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj"
-              },
-              "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj": {
-                "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj"
               },
               "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj": {
                 "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Provider\\PS.Provider.csproj"
@@ -73,6 +70,14 @@
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
               "version": "[4.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             },
             "MySql.Data": {
               "target": "Package",
@@ -157,76 +162,14 @@
         }
       }
     },
-    "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\PS.External.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
-        "projectName": "PS.Model",
-        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
-        "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
-        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.20, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj",
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\PS.External.Model.csproj",
         "projectName": "PS.External.Model",
-        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\PS.External.Model.csproj",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\PS.External.Model.csproj",
         "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
-        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Profile\\obj\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.External.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -284,14 +227,14 @@
         }
       }
     },
-    "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj": {
+    "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj",
-        "projectName": "PS.Proto",
-        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\PS.Proto.csproj",
+        "projectUniqueName": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
+        "projectName": "PS.Model",
+        "projectPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\PS.Model.csproj",
         "packagesPath": "C:\\Users\\18110\\.nuget\\packages\\",
-        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.ProtoType\\obj\\",
+        "outputPath": "D:\\Data\\project\\prsis\\PRSIS\\PS.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18110\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -317,6 +260,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

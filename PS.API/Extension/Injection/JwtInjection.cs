@@ -36,14 +36,14 @@ namespace PS.API.Extension.Injection
                 //验证参数
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
+                    //是否验证发行者签名
+                    ValidateIssuerSigningKey = true,
                     //获取设置密钥
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(token.Secret)),
                     //获取或设置发行者
                     ValidIssuer = token.Issuer,
                     //获取或设置订阅者
                     ValidAudience = token.Audience,
-                    //是否验证发行者签名
-                    ValidateIssuerSigningKey = true,
                     //是否验证发行者
                     ValidateIssuer = false,
                     //是否验订阅者

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PS.External.Model</name>
+    </assembly>
+    <members>
+        <member name="T:PS.External.Model.PLoginDto">
+            <summary>
+            接受参数 - 登录信息
+            </summary>
+        </member>
+        <member name="P:PS.External.Model.PLoginDto.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:PS.External.Model.PLoginDto.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="T:PS.External.Model.RLoginDto">
+            <summary>
+            返回结果 - 登录信息
+            </summary>
+        </member>
+        <member name="P:PS.External.Model.RLoginDto.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:PS.External.Model.RLoginDto.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+    </members>
+</doc>

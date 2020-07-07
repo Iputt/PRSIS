@@ -7,13 +7,15 @@ using Microsoft.Extensions.Hosting;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using PS.API.Extension;
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using PS.API.Interface;
 using PS.API.Extension.Injection;
-using PS.API.Extension.Jwt;
 using Newtonsoft.Json.Serialization;
+using PS.API.Domain.Repositories;
+using PS.API.Persistence.Respositories;
+using PS.API.Domain.Services;
+using PS.API.Services;
+using PS.API.Persistence.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace PS.API
 {
@@ -73,6 +75,15 @@ namespace PS.API
             services.AddSingleton<ILogin, LoginRepository>();
 
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
+
+            services.AddDbContext<AppDbContext>(options => {
+
+                options.UseInMemoryDatabase("supermarket-api-in-memory");
+
+            });
+
+            services.AddScoped<ICategoryRespository, CategoryRespository>();
+            services.AddScoped<ICategoryService, CategoryService>();
         }
 
         /// <summary>

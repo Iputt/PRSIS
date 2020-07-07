@@ -1,8 +1,6 @@
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.csprojAssemblyReference.cache
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\staticwebassets\PS.API.StaticWebAssets.Manifest.cache
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\staticwebassets\PS.API.StaticWebAssets.xml
-D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cs
-D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.AssemblyInfoInputs.cache
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.AssemblyInfo.cs
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -67,12 +65,10 @@ D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\nets
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Core.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.External.Model.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Model.dll
-D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Proto.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Provider.dll
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Core.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Model.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.External.Model.pdb
-D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Proto.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.Provider.pdb
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.RazorTargetAssemblyInfo.cache
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.csproj.CopyComplete
@@ -83,3 +79,7 @@ D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\PS.API.pdb
 D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.dll
 D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.pdb
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Data\project\prsis\PRSIS\PS.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Data\project\prsis\PRSIS\PS.API\obj\Debug\netcoreapp3.1\PS.API.MvcApplicationPartsAssemblyInfo.cache

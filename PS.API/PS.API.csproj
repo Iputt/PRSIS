@@ -20,20 +20,21 @@
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.5" />
     <PackageReference Include="MySql.Data" Version="8.0.20" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PS.Core\PS.Core.csproj" />
+    <ProjectReference Include="..\PS.External.Model\PS.External.Model.csproj" />
     <ProjectReference Include="..\PS.Model\PS.Model.csproj" />
-    <ProjectReference Include="..\PS.Profile\PS.External.Model.csproj" />
-    <ProjectReference Include="..\PS.ProtoType\PS.Proto.csproj" />
     <ProjectReference Include="..\PS.Provider\PS.Provider.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 
